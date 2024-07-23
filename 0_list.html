@@ -708,238 +708,292 @@
                             </nav>
                         </div>
                     </div>
-                    <form>
-                        <div class="card-content">
+                    <section class="section">
+                        <div class="card">
+                            <div class="card-header"></div>
                             <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-2">
-                                        <fieldset class="form-group">
-                                            <select class="form-select" id="basicSelect1">
-                                                <option>N</option>
-                                                <option>Y</option>
-                                            </select>
-                                        </fieldset>
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <fieldset class="form-group">
+                                                <select class="form-select" id="basicSelect1">
+                                                    <option>N</option>
+                                                    <option>Y</option>
+                                                </select>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <fieldset class="form-group">
+                                                <select class="form-select" id="basicSelect2">
+                                                    <option>N</option>
+                                                    <option>Y</option>
+                                                </select>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <fieldset class="form-group">
+                                                <select class="form-select" id="basicSelect3">
+                                                    <option>수정일</option>
+                                                    <option>등록일</option>
+                                                </select>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <input type="date" class="form-control mb-3 flatpickr-no-config"
+                                                placeholder="Select date..">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <input type="date" class="form-control mb-3 flatpickr-no-config"
+                                                placeholder="Select date..">
+                                        </div>
+                                    </div> <!-- class="row" 1 end -->
+                                    <div class="row"> <!-- class="row" 2 start -->
+                                        <div class="col-md-2">
+                                            <fieldset class="form-group">
+                                                <select class="form-select" id="basicSelect4">
+                                                    <option>검색구분</option>
+                                                    <option>코드그룹 코드</option>
+                                                    <option>코드그룹 이름</option>
+                                                    <option>코드</option>
+                                                    <option>코드 이름</option>
+                                                </select>
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <input type="text" class="form-control" id="basicInput" placeholder="검색어">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <button class="btn icon btn-sm btn-light"><i
+                                                    class="bi bi-search"></i></button>
+                                            <button class="btn icon btn-sm btn-light"><i
+                                                    class="bi bi-arrow-repeat"></i></button>
+                                        </div>
+                                    </div> <!-- class="row" 2 end -->
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <p>Total : 171</p>
+                                        </div>
+                                        <div class="col-md-8"></div>
+                                        <div class="col-md-2">
+                                            <fieldset class="form-group">
+                                                <select class="form-select" id="basicSelect">
+                                                    <option>5</option>
+                                                    <option>10</option>
+                                                    <option>15</option>
+                                                    <option>20</option>
+                                                    <option>25</option>
+                                                </select>
+                                            </fieldset>
+                                        </div>
                                     </div>
-                                    <div class="col-md-2">
-                                        <fieldset class="form-group">
-                                            <select class="form-select" id="basicSelect2">
-                                                <option>N</option>
-                                                <option>Y</option>
-                                            </select>
-                                        </fieldset>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <fieldset class="form-group">
-                                            <select class="form-select" id="basicSelect3">
-                                                <option>수정일</option>
-                                                <option>등록일</option>
-                                            </select>
-                                        </fieldset>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <input type="date" class="form-control mb-3 flatpickr-no-config"
-                                            placeholder="Select date..">
-                                    </div>
-                                    <div class="col-md-2">
-                                        <input type="date" class="form-control mb-3 flatpickr-no-config"
-                                            placeholder="Select date..">
-                                    </div>
-                                </div> <!-- class="row" 1 end -->
-                                <div class="row"> <!-- class="row" 2 start -->
-                                    <div class="col-md-2">
-                                        <fieldset class="form-group">
-                                            <select class="form-select" id="basicSelect4">
-                                                <option>검색구분</option>
-                                                <option>코드그룹 코드</option>
-                                                <option>코드그룹 이름</option>
-                                                <option>코드</option>
-                                                <option>코드 이름</option>
-                                            </select>
-                                        </fieldset>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <input type="text" class="form-control" id="basicInput" placeholder="검색어">
+                                </form>
+                                <!-- ------------table-------------->
+                                <div class="row" id="table-head">
+                                    <div class="col-12">
+                                        <div class="table-responsive">
+                                            <table class="table mb-0">
+                                                <thead>
+                                                    <tr>
+                                                        <th><input type="checkbox"></th>
+                                                        <th>#</th>
+                                                        <th>코드그룹 코드</th>
+                                                        <th>코드그룹 이름</th>
+                                                        <th>코드</th>
+                                                        <th>대체 코드</th>
+                                                        <th>코드 이름</th>
+                                                        <th>코드 이름(영문)</th>
+                                                        <th>사용</th>
+                                                        <th>순서</th>
+                                                        <th>등록일</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><input type="checkbox"></td>
+                                                        <td>171</td>
+                                                        <td>57</td>
+                                                        <td>테테테</td>
+                                                        <td>278</td>
+                                                        <td></td>
+                                                        <td>ㅁㄴㅇㄹ</td>
+                                                        <td></td>
+                                                        <td>Y</td>
+                                                        <td>1</td>
+                                                        <td>2023-10-12 16:02:31</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="checkbox"></td>
+                                                        <td>170</td>
+                                                        <td>33</td>
+                                                        <td>로그인.로그인UI</td>
+                                                        <td>272</td>
+                                                        <td></td>
+                                                        <td>사용자</td>
+                                                        <td></td>
+                                                        <td>Y</td>
+                                                        <td>1</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="checkbox"></td>
+                                                        <td>169</td>
+                                                        <td>33</td>
+                                                        <td>로그인.로그인UI</td>
+                                                        <td>273</td>
+                                                        <td></td>
+                                                        <td>관리자</td>
+                                                        <td></td>
+                                                        <td>Y</td>
+                                                        <td>1</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="checkbox"></td>
+                                                        <td>168</td>
+                                                        <td>32</td>
+                                                        <td>qna.타입</td>
+                                                        <td>266</td>
+                                                        <td></td>
+                                                        <td>기타</td>
+                                                        <td></td>
+                                                        <td>Y</td>
+                                                        <td>1</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="checkbox"></td>
+                                                        <td>167</td>
+                                                        <td>31</td>
+                                                        <td>qna.상태</td>
+                                                        <td>262</td>
+                                                        <td></td>
+                                                        <td>미확인</td>
+                                                        <td></td>
+                                                        <td>Y</td>
+                                                        <td>1</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="checkbox"></td>
+                                                        <td>161</td>
+                                                        <td>29</td>
+                                                        <td>물.자전거.구동방식</td>
+                                                        <td>253</td>
+                                                        <td></td>
+                                                        <td>인간</td>
+                                                        <td></td>
+                                                        <td>Y</td>
+                                                        <td>1</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="checkbox"></td>
+                                                        <td>160</td>
+                                                        <td>29</td>
+                                                        <td>물.자전거.구동방식</td>
+                                                        <td>254</td>
+                                                        <td></td>
+                                                        <td>전기</td>
+                                                        <td></td>
+                                                        <td>Y</td>
+                                                        <td>2</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="checkbox"></td>
+                                                        <td>159</td>
+                                                        <td>28</td>
+                                                        <td>물.자전거.타이어</td>
+                                                        <td>248</td>
+                                                        <td></td>
+                                                        <td>클린처</td>
+                                                        <td>Clincher</td>
+                                                        <td>Y</td>
+                                                        <td>1</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="checkbox"></td>
+                                                        <td>158</td>
+                                                        <td>28</td>
+                                                        <td>물.자전거.타이어</td>
+                                                        <td>249</td>
+                                                        <td></td>
+                                                        <td>튜브리스</td>
+                                                        <td>Tubeless</td>
+                                                        <td>Y</td>
+                                                        <td>2</td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><input type="checkbox"></td>
+                                                        <td>157</td>
+                                                        <td>28</td>
+                                                        <td>물.자전거.타이어</td>
+                                                        <td>250</td>
+                                                        <td></td>
+                                                        <td>튜블러</td>
+                                                        <td>Tubular</td>
+                                                        <td>Y</td>
+                                                        <td>3</td>
+                                                        <td></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
-                            </div> <!-- class="row" 2 end -->
-                        </div> <!-- class="card-body" end -->
-                </div> <!-- class="card-content" end -->
-                </form>
-                <section class="section">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">
-                                Code
-                            </h3>
-                        </div>
-                        <div class="card-body">
-                            <table class="table table-striped" id="table1">
-                                <thead>
-                                    <tr>
-                                        <th><input type="checkbox"></th>
-                                        <th>#</th>
-                                        <th>코드그룹 코드</th>
-                                        <th>코드그룹 이름</th>
-                                        <th>코드</th>
-                                        <th>대체 코드</th>
-                                        <th>코드 이름</th>
-                                        <th>코드 이름(영문)</th>
-                                        <th>사용</th>
-                                        <th>순서</th>
-                                        <th>등록일</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><input type="checkbox"></td>
-                                        <td>171</td>
-                                        <td>57</td>
-                                        <td>테테테</td>
-                                        <td>278</td>
-                                        <td></td>
-                                        <td>ㅁㄴㅇㄹ</td>
-                                        <td></td>
-                                        <td>Y</td>
-                                        <td>1</td>
-                                        <td>2023-10-12 16:02:31</td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox"></td>
-                                        <td>170</td>
-                                        <td>33</td>
-                                        <td>로그인.로그인UI</td>
-                                        <td>272</td>
-                                        <td></td>
-                                        <td>사용자</td>
-                                        <td></td>
-                                        <td>Y</td>
-                                        <td>1</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox"></td>
-                                        <td>169</td>
-                                        <td>33</td>
-                                        <td>로그인.로그인UI</td>
-                                        <td>273</td>
-                                        <td></td>
-                                        <td>관리자</td>
-                                        <td></td>
-                                        <td>Y</td>
-                                        <td>1</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox"></td>
-                                        <td>168</td>
-                                        <td>32</td>
-                                        <td>qna.타입</td>
-                                        <td>266</td>
-                                        <td></td>
-                                        <td>기타</td>
-                                        <td></td>
-                                        <td>Y</td>
-                                        <td>1</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox"></td>
-                                        <td>167</td>
-                                        <td>31</td>
-                                        <td>qna.상태</td>
-                                        <td>262</td>
-                                        <td></td>
-                                        <td>미확인</td>
-                                        <td></td>
-                                        <td>Y</td>
-                                        <td>1</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox"></td>
-                                        <td>161</td>
-                                        <td>29</td>
-                                        <td>물.자전거.구동방식</td>
-                                        <td>253</td>
-                                        <td></td>
-                                        <td>인간</td>
-                                        <td></td>
-                                        <td>Y</td>
-                                        <td>1</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox"></td>
-                                        <td>160</td>
-                                        <td>29</td>
-                                        <td>물.자전거.구동방식</td>
-                                        <td>254</td>
-                                        <td></td>
-                                        <td>전기</td>
-                                        <td></td>
-                                        <td>Y</td>
-                                        <td>2</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox"></td>
-                                        <td>159</td>
-                                        <td>28</td>
-                                        <td>물.자전거.타이어</td>
-                                        <td>248</td>
-                                        <td></td>
-                                        <td>클린처</td>
-                                        <td>Clincher</td>
-                                        <td>Y</td>
-                                        <td>1</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox"></td>
-                                        <td>158</td>
-                                        <td>28</td>
-                                        <td>물.자전거.타이어</td>
-                                        <td>249</td>
-                                        <td></td>
-                                        <td>튜브리스</td>
-                                        <td>Tubeless</td>
-                                        <td>Y</td>
-                                        <td>2</td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox"></td>
-                                        <td>157</td>
-                                        <td>28</td>
-                                        <td>물.자전거.타이어</td>
-                                        <td>250</td>
-                                        <td></td>
-                                        <td>튜블러</td>
-                                        <td>Tubular</td>
-                                        <td>Y</td>
-                                        <td>3</td>
-                                        <td></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                            </div> <!-- row end-->
+                            <!-- ------------table-------------->
+                            <div class="card-body">
+                                <div class="row md-3">
+                                    <ul class="pagination pagination-primary  justify-content-center">
+                                        <li class="page-item"><a class="page-link" href="#">
+                                                <span aria-hidden="true"><i class="bi bi-chevron-left"></i></span>
+                                            </a></li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">
+                                                <span aria-hidden="true"><i class="bi bi-chevron-right"></i></span>
+                                            </a></li>
+                                    </ul>
+                                </div>
+                                <div class="row md-3">
+                                    <div class="col-md-6">
+                                        <button class="btn icon btn-sm btn-danger"><i class="bi bi-x-lg"></i></button>
+                                        <button class="btn icon btn-sm btn-danger"><i class="bi bi-trash"></i></button>
+                                    </div>
+                                    <div class="col-md-6" align="Right">
+                                        <button class="btn icon btn-sm btn-success"><i
+                                                class="bi bi-file-earmark-excel"></i></button>
+                                        <button class="btn icon btn-sm btn-primary"><i
+                                                class="bi bi-plus-lg"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- card body end-->
 
-                </section>
-            </div>
-
-            <footer>
-                <div class="footer clearfix mb-0 text-muted">
-                    <div class="float-start">
-                        <p>2023 &copy; Mazer</p>
-                    </div>
-                    <div class="float-end">
-                        <p>Crafted with <span class="text-danger"><i class="bi bi-heart-fill icon-mid"></i></span>
-                            by <a href="https://saugi.me">Saugi</a></p>
-                    </div>
                 </div>
-            </footer>
+            </div>
         </div>
+
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer clearfix mb-0 text-muted">
+            <div class="float-start">
+                <p>2023 &copy; Mazer</p>
+            </div>
+            <div class="float-end">
+                <p>Crafted with <span class="text-danger"><i class="bi bi-heart-fill icon-mid"></i></span>
+                    by <a href="https://saugi.me">Saugi</a></p>
+            </div>
+        </div>
+    </footer>
+    </div>
     </div>
     <script src="assets/static/js/components/dark.js"></script>
     <script src="assets/extensions/perfect-scrollbar/perfect-scrollbar.min.js"></script>
