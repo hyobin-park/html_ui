@@ -2507,12 +2507,12 @@ progress {
     font-size: .875em;
     color: #7c8db5
 }
-
+/*form-control font-size 수정*/
 .form-control {
     display: block;
     width: 100%;
     padding: .375rem .75rem;
-    font-size: 1rem;
+    font-size: 15px;
     font-weight: 400;
     line-height: 1.5;
     color: #607080;
@@ -2681,12 +2681,13 @@ textarea.form-control-lg {
     height: calc(1.5em + 1rem + 2px)
 }
 
+/* select font 수정 */
 .form-select {
     --bs-form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
     display: block;
     width: 100%;
     padding: .375rem 1.75rem .375rem .75rem;
-    font-size: 1rem;
+    font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
     color: #607080;
